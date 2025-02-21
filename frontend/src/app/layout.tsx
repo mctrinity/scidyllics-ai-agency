@@ -1,14 +1,20 @@
-import "./globals.css";
-import { ReactNode } from "react";
-import Header from "@/components/Header"; // Ensure correct casing and path
-import Footer from "@/components/Footer"; // Ensure correct casing and path
+"use client";
 
-export const metadata = {
-  title: "SciDyllics Consultants | AI Automation & Chatbots",
-  description: "AI-powered automation and chatbot solutions for businesses.",
-};
+import "./globals.css";
+import { ReactNode, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <html lang="en">
       <body className="bg-black text-white">
