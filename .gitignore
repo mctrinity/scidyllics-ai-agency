@@ -37,6 +37,8 @@ frontend/npm-debug.log*
 frontend/yarn-error.log*
 frontend/logs/
 frontend/.vscode/
+node_modules/
+package-lock.json
 
 # Logs
 logs/
