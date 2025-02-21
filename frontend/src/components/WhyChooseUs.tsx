@@ -1,3 +1,5 @@
+import { ShieldCheck } from "lucide-react"; // Import an icon for trust & reliability
+
 export default function WhyChooseUs() {
   return (
     <section
@@ -9,7 +11,12 @@ export default function WhyChooseUs() {
       }}
     >
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold">Why Choose SciDyllics?</h2>
+        {/* Heading with Icon */}
+        <div className="flex justify-center items-center gap-3">
+          <ShieldCheck size={36} className="text-[#497D74]" />
+          <h2 className="text-4xl font-bold">Why Choose SciDyllics?</h2>
+        </div>
+
         <p
           className="text-lg mt-4"
           style={{ color: "var(--text-color-light)" }} // Ensures good readability

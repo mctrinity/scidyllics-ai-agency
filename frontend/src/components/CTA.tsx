@@ -11,8 +11,8 @@ export default function CTA() {
           <p className="text-lg mt-4">Get started today with a free AI consultation.</p>
           <a
             href="#contact"
-            className="mt-6 inline-block px-6 py-3 bg-black text-cyan-500 font-bold text-lg rounded-lg hover:bg-gray-900 transition transform hover:scale-105"
-          >
+            className="mt-6 inline-block px-6 py-3 bg-[#497D74] text-white font-bold text-lg rounded-lg hover:bg-[#3b665e] transition transform hover:scale-105"
+            >
             Get a Free Consultation
           </a>
         </div>

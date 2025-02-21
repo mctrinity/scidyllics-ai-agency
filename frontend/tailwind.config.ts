@@ -31,8 +31,9 @@ const config: Config = {
           "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
-    },
+    }, // ✅ Closing bracket added here
   },
+  darkMode: 'class', // Enable dark mode using a CSS class
   plugins: [],
 };
 

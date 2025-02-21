@@ -1,3 +1,5 @@
+import { BrainCircuit } from "lucide-react"; // Importing an AI-related icon
+
 export default function Services() {
   return (
     <section
@@ -9,7 +11,12 @@ export default function Services() {
       }}
     >
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold">Our AI-Powered Services</h2>
+        {/* Heading with Icon */}
+        <div className="flex justify-center items-center gap-3">
+          <BrainCircuit size={36} className="text-[#497D74]" />
+          <h2 className="text-4xl font-bold">Our AI-Powered Services</h2>
+        </div>
+
         <p
           className="text-lg mt-4"
           style={{ color: "var(--text-color-light)" }} // Ensuring readable contrast
@@ -25,9 +32,9 @@ export default function Services() {
             data-aos-delay="200"
             style={{ backgroundColor: "var(--card-bg)", color: "var(--text-color)" }}
           >
-            <h3 className="text-2xl font-semibold">AI Workflow Automation</h3>
+            <h3 className="text-2xl font-semibold">Workflow Automation</h3>
             <p style={{ color: "var(--text-color-light)" }} className="mt-2">
-              Leverage AI to optimize your business.
+            Leverage cutting-edge technology to optimize your business.
             </p>
           </div>
 
@@ -38,10 +45,11 @@ export default function Services() {
             data-aos-delay="400"
             style={{ backgroundColor: "var(--card-bg)", color: "var(--text-color)" }}
           >
-            <h3 className="text-2xl font-semibold">AI Chatbots</h3>
+            <h3 className="text-2xl font-semibold">AI Agents & LLMs</h3>
             <p style={{ color: "var(--text-color-light)" }} className="mt-2">
-              Enhance customer support with AI.
+              Enhance customer interactions with intelligent virtual assistants powered by large language models.
             </p>
+
           </div>
 
           {/* Service 3 */}
@@ -51,9 +59,9 @@ export default function Services() {
             data-aos-delay="600"
             style={{ backgroundColor: "var(--card-bg)", color: "var(--text-color)" }}
           >
-            <h3 className="text-2xl font-semibold">AI Data & Analytics</h3>
+            <h3 className="text-2xl font-semibold">Data & Analytics</h3>
             <p style={{ color: "var(--text-color-light)" }} className="mt-2">
-              Make better decisions with AI insights.
+            Make better decisions with actionable insights.
             </p>
           </div>
         </div>
