@@ -1,30 +1,63 @@
 export default function WhyChooseUs() {
-    return (
-      <section className="w-full py-20 bg-black text-white" data-aos="fade-up">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold">Why Choose SciDyllics?</h2>
-          <p className="text-lg text-gray-300 mt-4">
-            We provide cutting-edge AI automation and chatbot solutions.
-          </p>
-  
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="200">
-              <h3 className="text-xl font-semibold">Custom AI Solutions</h3>
-              <p className="text-gray-300 mt-2">Tailored AI automation for businesses.</p>
-            </div>
-  
-            <div className="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="400">
-              <h3 className="text-xl font-semibold">Seamless Integration</h3>
-              <p className="text-gray-300 mt-2">Works with your existing software.</p>
-            </div>
-  
-            <div className="p-6 bg-gray-800 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-delay="600">
-              <h3 className="text-xl font-semibold">Expert AI Consultants</h3>
-              <p className="text-gray-300 mt-2">Maximizing efficiency for your company.</p>
-            </div>
+  return (
+    <section
+      className="w-full py-20 transition-all duration-300"
+      data-aos="fade-up"
+      style={{
+        backgroundColor: "var(--background-color)",
+        color: "var(--text-color)",
+      }}
+    >
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-4xl font-bold">Why Choose SciDyllics?</h2>
+        <p
+          className="text-lg mt-4"
+          style={{ color: "var(--text-color-light)" }} // Ensures good readability
+        >
+          We provide cutting-edge AI automation and chatbot solutions.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+          {/* Feature 1 */}
+          <div
+            className="p-6 rounded-lg shadow-lg transition-all duration-300"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+            style={{ backgroundColor: "var(--card-bg)", color: "var(--text-color)" }}
+          >
+            <h3 className="text-xl font-semibold">Custom AI Solutions</h3>
+            <p style={{ color: "var(--text-color-light)" }} className="mt-2">
+              Tailored AI automation for businesses.
+            </p>
+          </div>
+
+          {/* Feature 2 */}
+          <div
+            className="p-6 rounded-lg shadow-lg transition-all duration-300"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+            style={{ backgroundColor: "var(--card-bg)", color: "var(--text-color)" }}
+          >
+            <h3 className="text-xl font-semibold">Seamless Integration</h3>
+            <p style={{ color: "var(--text-color-light)" }} className="mt-2">
+              Works with your existing software.
+            </p>
+          </div>
+
+          {/* Feature 3 */}
+          <div
+            className="p-6 rounded-lg shadow-lg transition-all duration-300"
+            data-aos="zoom-in"
+            data-aos-delay="600"
+            style={{ backgroundColor: "var(--card-bg)", color: "var(--text-color)" }}
+          >
+            <h3 className="text-xl font-semibold">Expert AI Consultants</h3>
+            <p style={{ color: "var(--text-color-light)" }} className="mt-2">
+              Maximizing efficiency for your company.
+            </p>
           </div>
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </section>
+  );
+}

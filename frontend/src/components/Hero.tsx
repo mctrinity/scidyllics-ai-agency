@@ -2,7 +2,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center bg-black text-white">
+    <section
+      className="relative w-full min-h-screen flex items-center justify-center"
+      style={{
+        backgroundColor: "var(--background-color)",
+        color: "var(--text-color)",
+      }}
+    >
       <div className="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center">
         
         {/* Left Side - Text Content */}
@@ -10,7 +16,10 @@ export default function Hero() {
           <h1 className="text-5xl lg:text-6xl font-bold leading-tight animate-fade-in">
             AI-Powered Solutions for Smart Businesses
           </h1>
-          <p className="text-lg text-gray-300 mt-4 animate-fade-in delay-200">
+          <p
+            className="text-lg mt-4 animate-fade-in delay-200"
+            style={{ color: "var(--text-color)" }}
+          >
             Automate workflows, enhance customer experiences, and drive business growth with intelligent AI.
           </p>
           <a

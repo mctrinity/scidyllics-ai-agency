@@ -32,7 +32,13 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-black text-white shadow-md z-50">
+    <header
+      className="fixed top-0 left-0 w-full shadow-md z-50"
+      style={{
+        backgroundColor: "var(--background-color)",
+        color: "var(--text-color)",
+      }}
+    >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold">
@@ -53,16 +59,17 @@ export default function Header() {
           className="md:hidden focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Bars3Icon className="w-8 h-8 text-white transition transform hover:scale-110" />
+          <Bars3Icon className="w-8 h-8 transition transform hover:scale-110" style={{ color: "var(--text-color)" }} />
         </button>
       </div>
 
       {/* Mobile Menu with More Noticeable Animation */}
       <div
         ref={menuRef}
-        className={`fixed top-[60px] left-0 w-full bg-black py-4 border-t border-gray-700 transition-transform duration-500 ease-in-out 
+        className={`fixed top-[60px] left-0 w-full py-4 border-t border-gray-700 transition-transform duration-500 ease-in-out 
           ${isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}
         `}
+        style={{ backgroundColor: "var(--background-color)" }}
       >
         <ul className="flex flex-col space-y-4 text-center">
           <li>

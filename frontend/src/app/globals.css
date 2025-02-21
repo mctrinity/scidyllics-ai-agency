@@ -1,21 +1,22 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Light Mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-color: #ffffff;
+  --text-color: #171717;
+  --text-color-light: #4a4a4a;
+  --card-bg: #f7f7f7;
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background-color: #0a0a0a;
+    --text-color: #ededed;
+    --text-color-light: #b0b0b0;
+    --card-bg: #1e1e1e;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,3 +1,4 @@
+// tailwind.config.ts
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -6,6 +7,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        background: 'var(--background-color)',
+        text: 'var(--text-color)',
+        // Add more custom colors as needed
+      },
       animation: {
         "fade-in": "fadeIn 1s ease-out forwards",
         "slide-up": "slideUp 1s ease-out forwards",

@@ -6,7 +6,7 @@ import CTA from "@/components/CTA";
 
 export default function HomePage() {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-white text-white">
       <Hero />
       <Services />
       <WhyChooseUs />
