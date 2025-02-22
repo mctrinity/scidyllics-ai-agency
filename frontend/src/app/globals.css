@@ -26,3 +26,8 @@
 .swiper-button-prev {
   display: none !important;
 }
+
+/* H2 color */
+h2 {
+  color: #497D74;
+}
