@@ -39,6 +39,7 @@ frontend/logs/
 frontend/.vscode/
 node_modules/
 package-lock.json
+frontend/package-lock.json
 
 # Logs
 logs/
