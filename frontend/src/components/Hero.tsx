@@ -35,7 +35,7 @@ export default function Hero() {
           >
             <SwiperSlide>
               <Image
-                src="/hero-image1.png"
+                src="/hero-image1.webp"
                 alt="AI Automation"
                 width={550}
                 height={350}
@@ -44,7 +44,7 @@ export default function Hero() {
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                src="/hero-image2.png"
+                src="/hero-image2.webp"
                 alt="AI Chatbots"
                 width={550}
                 height={350}
@@ -53,7 +53,7 @@ export default function Hero() {
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                src="/hero-image3.png"
+                src="/hero-image3.webp"
                 alt="AI Data Analytics"
                 width={550}
                 height={350}
