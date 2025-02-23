@@ -31,3 +31,8 @@
 h2 {
   color: #497D74;
 }
+
+.brand-text {
+  color: #497D74; /* Set your custom color */
+  transition: color 0.3s ease-in-out; /* Smooth transition */
+}

@@ -3,19 +3,23 @@ import Services from "@/components/Services";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
-import ShapeDivider from "@/components/common/ShapeDivider"; // Import Shape Divider
+import ShapeDivider from "@/components/common/ShapeDivider";
 
 export default function HomePage() {
   return (
     <div className="bg-white text-white relative">
       <Hero />
-      <ShapeDivider /> {/* ✅ Now it extends full width without Hero container restrictions */}
+      <ShapeDivider position="bottom" type="wave" color="#F5F5F5" />
+
       <Services />
-      <ShapeDivider /> {/* ✅ Now it extends full width without Hero container restrictions */}
+      <ShapeDivider position="top" type="wave2" color="#F5F5F5" />
+
       <WhyChooseUs />
-      <ShapeDivider /> {/* ✅ Now it extends full width without Hero container restrictions */}
+      <ShapeDivider position="bottom" type="wave" color="#F5F5F5" />
+
       <Testimonials />
-      <ShapeDivider /> {/* ✅ Now it extends full width without Hero container restrictions */}
+      <ShapeDivider position="top" type="wave2" color="#F5F5F5" />
+
       <CTA />
     </div>
   );

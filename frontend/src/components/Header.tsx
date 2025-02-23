@@ -59,7 +59,9 @@ export default function Header() {
               className="rounded-lg"
               priority
             />
-            <span className="text-lg font-bold whitespace-nowrap text-teal-700">SciDyllics</span>
+            {/* <span className="text-lg font-bold whitespace-nowrap text-teal-700">SciDyllics</span> */}
+            <span className="text-lg font-bold whitespace-nowrap brand-text">SciDyllics</span>
+
           </Link>
 
           {/* Desktop Menu */}
