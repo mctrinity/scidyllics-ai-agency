@@ -1,0 +1,17 @@
+.customShapeDividerBottom {
+    position: relative;
+    width: 100vw; /* Ensures it spans the full viewport width */
+    overflow: hidden;
+    line-height: 0;
+}
+
+.customShapeDividerBottom svg {
+    position: relative;
+    display: block;
+    width: 100%; /* Ensures it stretches fully */
+    height: 229px;
+}
+
+.shapeFill {
+    fill: #497D74;
+}

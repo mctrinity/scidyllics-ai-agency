@@ -1,4 +1,4 @@
-"use client"; // Needed if using Next.js App Router
+"use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -12,16 +12,16 @@ import "swiper/css/navigation";
 export default function Hero() {
   return (
     <section
-      className="relative w-full min-h-[80vh] flex items-center justify-center pt-16 md:pt-20 z-10"
+      className="relative w-full min-h-[80vh] flex flex-col items-center justify-center pt-16 pb-24 md:pt-20 z-10 overflow-hidden"
       style={{
         backgroundColor: "var(--background-color)",
         color: "var(--text-color)",
       }}
     >
-      {/* Hero Container - Grid for Desktop, Column for Mobile */}
-      <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      {/* Hero Container */}
+      <div className="relative z-10 w-full max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mx-auto">
         
-        {/* Right Side - Hero Image Carousel (Appears Above in Mobile) */}
+        {/* Right Side - Hero Image Carousel */}
         <div className="flex justify-center animate-scale-in delay-300 order-1 lg:order-2">
           <Swiper
             modules={[Autoplay, Pagination, Navigation]}
@@ -29,7 +29,7 @@ export default function Hero() {
             slidesPerView={1}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            navigation={false} // Arrows hidden via CSS
+            navigation={false}
             loop={true}
             className="w-full max-w-md"
           >
@@ -63,7 +63,7 @@ export default function Hero() {
           </Swiper>
         </div>
 
-        {/* Left Side - Text Content (Always Below in Mobile) */}
+        {/* Left Side - Text Content */}
         <div className="text-center lg:text-left animate-slide-up order-2 lg:order-1">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in">
             AI-Powered Solutions for Smart Businesses
@@ -78,7 +78,6 @@ export default function Hero() {
             Get a Free AI Consultation
           </a>
         </div>
-
       </div>
     </section>
   );

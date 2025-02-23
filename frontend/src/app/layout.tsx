@@ -19,7 +19,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-white text-white">
         <Header />
-        <main className="container mx-auto p-6">{children}</main>
+        {/* ✅ Removed 'container mx-auto' from <main> to avoid restricting Shape Divider */}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

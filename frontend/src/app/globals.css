@@ -12,14 +12,14 @@
 }
 
 /* Dark Mode */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0a0a0a;
     --text-color: #ededed;
     --text-color-light: #b0b0b0;
     --card-bg: #1e1e1e;
   }
-}
+} */
 
 /* Hide Swiper buttons */
 .swiper-button-next,
