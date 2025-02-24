@@ -4,6 +4,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import ShapeDivider from "@/components/common/ShapeDivider";
+import ChatbotWidget from "@/components/ChatbotWidget"; // ✅ Import Chatbot Widget
 
 export default function HomePage() {
   return (
@@ -21,6 +22,9 @@ export default function HomePage() {
       <ShapeDivider position="top" type="wave2" color="#F5F5F5" />
 
       <CTA />
+
+      {/* ✅ Floating Chatbot Widget */}
+      <ChatbotWidget />
     </div>
   );
 }

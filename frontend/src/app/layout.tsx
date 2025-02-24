@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatbotWidget from "@/components/ChatbotWidget"; // ✅ Import Chatbot Widget
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   useEffect(() => {
@@ -19,9 +20,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-white text-white">
         <Header />
-        {/* ✅ Removed 'container mx-auto' from <main> to avoid restricting Shape Divider */}
         <main>{children}</main>
         <Footer />
+
+        {/* ✅ Chatbot will now appear on all pages */}
+        <ChatbotWidget />
       </body>
     </html>
   );
