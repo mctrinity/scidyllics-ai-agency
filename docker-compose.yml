@@ -1,0 +1,14 @@
+services:
+  frontend:
+    build: .
+    container_name: nextjs-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://fastapi-backend:8000  # ✅ Use correct backend container name
+    networks:
+      - scidyllics-network  # ✅ Must match backend network
+
+networks:
+  scidyllics-network:
+    external: true  # ✅ Ensures frontend connects to backend network

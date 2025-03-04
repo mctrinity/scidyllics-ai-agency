@@ -71,8 +71,8 @@ frontend/          # Next.js frontend
 4. Push the changes: `git push origin feature-branch`
 5. Submit a pull request
 
-## 📝 License
-This project is licensed under the **MIT License**.
+## 📝 Scidyllics Backend repository location
+GitHub repo:  https://github.com/mctrinity/scidyllics-backend
 
 ---
 

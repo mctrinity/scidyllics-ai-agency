@@ -1,6 +1,14 @@
 import { NextResponse } from "next/server";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL!;
+// const API_URL = process.env.NEXT_PUBLIC_API_URL!;
+
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  (typeof window === "undefined" ? "http://fastapi-backend:8000" : "http://127.0.0.1:8000");
+
+console.log("🔹 Using API_URL:", API_URL);
+
+
 
 export async function POST(req: Request) {  // ✅ Ensures only POST requests work
   try {

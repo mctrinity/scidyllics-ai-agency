@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 // ✅ Define a strict type for messages
@@ -14,6 +14,8 @@ export default function ChatbotWidget() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState<ChatMessage[]>([]); // ✅ Use defined type
   const [loading, setLoading] = useState(false);
+
+  const messagesEndRef = useRef<HTMLDivElement | null>(null); // ✅ Ref to track last message
 
   const handleSendMessage = async () => {
     if (!message.trim()) return;
@@ -43,6 +45,11 @@ export default function ChatbotWidget() {
 
     setMessage(""); // ✅ Clear input field
   };
+
+  // ✅ Auto-scroll to the latest message
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   // ✅ Detect "Enter" key to send messages
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -86,7 +93,9 @@ export default function ChatbotWidget() {
               {msg.text}
             </div>
           ))}
-          {loading && <p className="text-gray-500">Typing...</p>}
+          {loading && <p className="text-gray-500"><i>Typing...</i></p>}
+          {/* Invisible div to scroll into view */}
+          <div ref={messagesEndRef} />
         </div>
 
         {/* Input Box */}
@@ -96,7 +105,7 @@ export default function ChatbotWidget() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             onKeyDown={handleKeyDown} // ✅ Detects Enter key
-            className="border p-2 rounded w-full text-[#497D74] placeholder-gray-400 bg-white focus:ring-2 focus:ring-[#497D74]"
+            className="border p-2 rounded w-full text-[#497D74] placeholder-gray-400 bg-white focus:ring-2 focus:ring-[#497D74] focus:outline-none"
             placeholder="Type a message..."
           />
           <button
@@ -118,4 +127,3 @@ export default function ChatbotWidget() {
     </div>
   );
 }
-
