@@ -83,6 +83,12 @@ export default function Header() {
               Services
             </Link>
             <Link
+              href="/blog"
+              className={`transition ${pathname === "/blog" ? "text-[#497D74] font-semibold" : "text-inherit"}`}
+            >
+              Blog
+            </Link>
+            <Link
               href="/about"
               className={`transition ${
                 pathname === "/about" ? "text-[#497D74] font-semibold" : "text-inherit"
@@ -144,6 +150,15 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
               >
                 Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/blog"
+                className={`block py-3 text-lg transition ${pathname === "/blog" ? "text-[#497D74] font-semibold" : "text-inherit"}`}
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
               </Link>
             </li>
             <li>
